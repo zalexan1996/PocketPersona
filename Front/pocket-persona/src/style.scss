@@ -1,2 +1,6 @@
-//@import "node_modules/bootstrap/scss/bootstrap.scss";
-@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
+@import "/node_modules/primevue/resources/themes/aura-dark-blue/theme.css";
+
+html, body {
+    background-color: #161d21 !important;
+}

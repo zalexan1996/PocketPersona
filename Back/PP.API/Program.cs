@@ -21,6 +21,7 @@ builder.Services.AddMediatR(x => {
     x.RegisterServicesFromAssemblyContaining<PersonaCommandResponse>();
 });
 builder.Services.AddOpenApiDocument();
+builder.Services.AddCors();
 
 builder.Services.AddTransient<PersonaValidationLibrary>();
 
@@ -54,5 +55,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors(x => {
+    x.AllowAnyHeader()
+        .AllowAnyMethod()
+        .WithOrigins("http://localhost:5173", "https://localhost:7195");
+});
 app.MapControllers();
 app.Run();

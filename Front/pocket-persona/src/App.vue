@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Button from 'primevue/button';
+import Layout from '@/views/Layout.vue';
 </script>
 
 <template>
-  <Button severity="primary">Test</Button>
+  <Layout/>
 </template>
